@@ -1,7 +1,7 @@
 
 public class Boleto {
 
-  private double valor;
+  double valor;
   String vencimento;
   String codigoDeBarras;
 
@@ -26,5 +26,7 @@ public class Boleto {
   public void receberBoleto() {
     System.out.println("Recebendo boleto...");
   }
+
+  private class AulaHoje {}
 
 }
