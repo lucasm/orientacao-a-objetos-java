@@ -32,6 +32,10 @@ public class Boleto {
     return vencimento;
   }
 
+  public void setValorAposVencimento(int juros) {
+    valor = valor + juros;
+  }
+
   public void cancelarBoleto() {
     System.out.println("Cancelando boleto...");
   }
