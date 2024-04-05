@@ -1,7 +1,7 @@
 public class Impressora {
 
   public void imprimir(Boleto b) {
-    System.out.println("Imprimindo boleto... Valor: " + b.valor + " | Vencimento: " + b.vencimento + " | Código de barras: " + b.codigoDeBarras);
+    System.out.println("Imprimindo boleto... Valor: " + b.getValor() + " | Vencimento: " + b.getVencimento() + " | Código de barras: " + b.getCodigoDeBarras());
   }
 
 }
