@@ -5,23 +5,26 @@ public class Boleto {
   private String vencimento;
   private String codigoDeBarras;
 
-  // varáveis private: não posso escrever os dados em variáveis privadas por outra classe, mas posso ler. ou seja, posso acessar os dados, mas não posso alterá-los.
+  // varáveis private: posso acessar os dados, mas não posso alterá-los por fora da classe
 
-  public void emitirBoleto(double valor, String vencimento, String codigoDeBarras) {
+  // construtor: método especial que só existe no momento quando a classe é instanciada (chamada New) e cria o objeto
+  public Boleto(double valor, String vencimento, String codigoDeBarras) {
+    this.valor = valor;
+    this.vencimento = vencimento;
+    this.codigoDeBarras = codigoDeBarras;
+  }
+  // this: é uma referência para o objeto que está instanciado, só pode ser usado dentro da própria classe
+
+  public void emitirBoleto() {
     System.out.println("Emitindo boleto... Valor: " + valor + " | Vencimento: " + vencimento + " | Código de barras: " + codigoDeBarras);
 
-    Boleto b = new Boleto();
-    b.valor = valor;
-    b.vencimento = vencimento;
-    b.codigoDeBarras = codigoDeBarras;
-
-    Impressora i = new Impressora();
-    i.imprimir(b);
+    System.out.println(new Impressora());
+    new Impressora().imprimir(this);
 
 
   }
 
-  // aqui vamos criar métodos para acessar os dados privados, mas não para alterá-los
+  // aqui vamos criar métodos para acessar as variáveis de classe, que são privadas, não podemos alterá-los
   public String getCodigoDeBarras() {
     return codigoDeBarras;
   }
