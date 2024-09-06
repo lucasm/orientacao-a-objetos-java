@@ -48,9 +48,10 @@ class Cliente {
 
 // Herança pai, ContaBancaria é a classe base
 class ContaBancaria {
-  private Cliente cliente; // Composição
+  private Cliente cliente; // Composição, instância de Cliente
   private int numeroConta;
   protected double saldo; // Visível nas subclasses
+  private Emprestimo emprestimo; // Composição, instância de Empréstimo
 
   public ContaBancaria(Cliente cliente, int numeroConta, double saldo) {
       this.cliente = cliente;
@@ -70,6 +71,7 @@ class ContaBancaria {
       }
   }
 
+  // aqui aconteceu uma decisão de design, optei por composição, pois Empréstimo é um serviço que ContaBancaria pode utilizar
   public void solicitarEmprestimo(double valorEmprestimo, double taxaJuros) {
       Emprestimo emprestimo = new Emprestimo(valorEmprestimo, taxaJuros);
       saldo += emprestimo.calcularTotalPagar();
