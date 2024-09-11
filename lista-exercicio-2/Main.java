@@ -21,7 +21,7 @@ Agora, você precisa criar um novo serviço: Empréstimo. Você deve decidir se 
 public class Main {
   public static void main(String[] args) {
       Cliente cliente = new Cliente("João", "123.456.789-00");
-      ContaCorrente contaCorrente = new ContaCorrente(cliente, 1234, 1000);
+      ContaCor contaCorrente = new ContaCor(cliente, 1234, 1000);
       ContaPoupanca contaPoupanca = new ContaPoupanca(cliente, 5678, 500);
 
       contaCorrente.depositar(100);
