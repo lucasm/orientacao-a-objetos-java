@@ -1,0 +1,7 @@
+{
+  "type": "java",
+  "name": "Launch Main",
+  "request": "launch",
+  "mainClass": "lista-exercicio-3",
+  "projectName": "MeuProjeto"
+}
